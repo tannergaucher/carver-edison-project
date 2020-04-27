@@ -14,7 +14,9 @@ export default function ExpenseForm() {
   return (
     <form
       className="card padding"
-      onSubmit={() => {
+      onSubmit={(e) => {
+        e.preventDefault()
+        // Do API stuff here.
         history.push('/thanks')
       }}
     >
