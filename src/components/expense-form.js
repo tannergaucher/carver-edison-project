@@ -1,28 +1,26 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { setSalary, setContribution } from "../actions";
-import { calculateSavings, calculateExpense, formatter } from "../utils";
+import { setSalary, setContribution } from '../actions'
+import { calculateSavings, calculateExpense, formatter } from '../utils'
 
 export default function ExpenseForm() {
-  const [salaryFocused, setSalaryFocused] = useState(false);
-  const salary = useSelector((state) => state.salary);
-  const contribution = useSelector((state) => state.contribution);
-  const dispatch = useDispatch();
-  const history = useHistory();
+  const [salaryFocused, setSalaryFocused] = useState(false)
+  const salary = useSelector((state) => state.salary)
+  const contribution = useSelector((state) => state.contribution)
+  const dispatch = useDispatch()
+  const history = useHistory()
 
   return (
     <form
       className="card padding"
       onSubmit={() => {
-        history.push("/thanks");
+        history.push('/thanks')
       }}
     >
       <input
         type="range"
-        id="contribution"
-        name="contribution"
         min="1"
         max="30"
         value={contribution}
@@ -32,7 +30,7 @@ export default function ExpenseForm() {
         }}
       />
       <div className="grid container">
-        <h4>Your Salary: </h4>
+        <h4>Your Salary</h4>
         {salaryFocused ? (
           <input
             type="number"
@@ -50,9 +48,9 @@ export default function ExpenseForm() {
             readOnly
           />
         )}
-        <h4>Your Expense:</h4>
+        <h4>Your Expense</h4>
         <h4>{calculateExpense(salary, contribution)}</h4>
-        <h4>Your Savings:</h4>
+        <h4>Your Savings</h4>
         <h4>{calculateSavings(salary, contribution)}</h4>
       </div>
       <button
@@ -62,5 +60,5 @@ export default function ExpenseForm() {
         Submit
       </button>
     </form>
-  );
+  )
 }

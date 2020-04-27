@@ -13,7 +13,7 @@ export default function LoginPage() {
     <div className="page">
       <GoogleLogin
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-        buttonText="Login"
+        buttonText="Sign in with Google"
         onSuccess={(response) => {
           dispatch(setName(response.profileObj.givenName))
           history.push('/')
