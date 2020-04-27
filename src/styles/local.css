@@ -10,8 +10,8 @@
   margin-bottom: 0;
 }
 
-hr {
-  width: 100%;
+.btn {
+  font-size: var(--text-md);
 }
 
 /* LOCAL STYLES */
