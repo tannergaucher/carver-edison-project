@@ -1,0 +1,26 @@
+/* SEMANTIC STYLES OVERRIDES */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr {
+  width: 100%;
+}
+
+/* LOCAL STYLES */
+
+.card {
+  width: calc(100% - var(--space-md));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
