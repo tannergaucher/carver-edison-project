@@ -2,7 +2,7 @@
 
 ## View Deployed Project
 
-TODO: Add deployed URL
+- [tanner-gaucher-carver-edison.netlify.app](https://tanner-gaucher-carver-edison.netlify.app)
 
 ## Run Project Locally
 
