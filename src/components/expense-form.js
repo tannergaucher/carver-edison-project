@@ -39,11 +39,11 @@ export default function ExpenseForm() {
             value={salary}
             onBlur={() => setSalaryFocused(false)}
             onChange={(e) => dispatch(setSalary(e.target.value))}
-            style={{ margin: `0` }}
           />
         ) : (
           <input
             type="text"
+            className="input"
             value={formatter.format(salary)}
             onFocus={() => setSalaryFocused(true)}
             readOnly
