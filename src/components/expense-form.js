@@ -7,8 +7,7 @@ import { calculateSavings, calculateExpense, formatter } from '../utils'
 
 export default function ExpenseForm() {
   const [salaryFocused, setSalaryFocused] = useState(false)
-  const salary = useSelector((state) => state.salary)
-  const contribution = useSelector((state) => state.contribution)
+  const { salary, contribution } = useSelector((state) => state)
   const dispatch = useDispatch()
   const history = useHistory()
 

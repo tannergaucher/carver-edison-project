@@ -5,9 +5,7 @@ import { Redirect, Link } from 'react-router-dom'
 import { calculateExpense, calculateSavings, formatter } from '../utils'
 
 export default function ThanksPage() {
-  const name = useSelector((state) => state.name)
-  const salary = useSelector((state) => state.salary)
-  const contribution = useSelector((state) => state.contribution)
+  const { name, salary, contribution } = useSelector((state) => state)
 
   if (!name) return <Redirect to="/login" />
 
