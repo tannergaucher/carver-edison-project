@@ -13,6 +13,5 @@ export const calculateExpense = (salary, contribution) => {
 export const calculateSavings = (salary, contribution) => {
   const percentage = (100 - contribution) / 100
   const amount = (salary / 12) * percentage
-
   return formatter.format(parseInt(amount))
 }
