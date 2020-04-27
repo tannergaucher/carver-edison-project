@@ -1,13 +1,13 @@
-import React from "react";
-import GoogleLogin from "react-google-login";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import React from 'react'
+import GoogleLogin from 'react-google-login'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
-import { setName } from "../actions";
+import { setName } from '../actions'
 
 export default function LoginPage() {
-  const history = useHistory();
-  const dispatch = useDispatch();
+  const history = useHistory()
+  const dispatch = useDispatch()
 
   return (
     <div className="page">
@@ -15,11 +15,10 @@ export default function LoginPage() {
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Login"
         onSuccess={(response) => {
-          console.log(response);
-          dispatch(setName(response.profileObj.givenName));
-          history.push("/");
+          dispatch(setName(response.profileObj.givenName))
+          history.push('/')
         }}
       />
     </div>
-  );
+  )
 }
